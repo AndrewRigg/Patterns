@@ -31,7 +31,7 @@ public class Canvas {
 		this.add_colour = colour;
 		this.very_random = very_random;
 		this.levels = levels;
-		level = MAX_SQUARE_SIZE / (levels*0.9);
+		level = MAX_SQUARE_SIZE / (levels * 0.9);
 		coords = new double[levels];
 		lengths = new double[levels];
 		squares = new Rectangle[levels];

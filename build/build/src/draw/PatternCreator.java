@@ -47,7 +47,7 @@ public class PatternCreator extends Application {
     
     public void start(Stage primaryStage) {
     
-    	Spinner<Integer> spinner = new Spinner<Integer>(1, 100, 14);
+    	Spinner<Integer> spinner = new Spinner<Integer>(1, 50, 14);
     	
         class IncrementHandler implements EventHandler<MouseEvent> {
 
