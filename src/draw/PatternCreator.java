@@ -54,7 +54,6 @@ public class PatternCreator extends Application {
             private Spinner<Integer> spinner;
             private boolean increment;
             private long startTimestamp;
-            
 
             private static final long DELAY = 1000l * 1000L * 650L; // 0.75 sec
             private static final long NORMAL_DELAY = 1000l * 1000L * 100L; // 0.1 sec
@@ -209,10 +208,13 @@ public class PatternCreator extends Application {
         primaryStage.setScene(new Scene(root, 1000, 1000));
         primaryStage.show();
     }
+    
     public void createCanvas(Spinner<Integer> spinner) {
+    	//int shape = (int)(Math.random()*8);
+    	int shape = 6; 
     	pattern.getChildren().clear();
     	root.getChildren().clear();
-    	Canvas canvas = new Canvas(spinner.getValue(), add_colour, very_random);
+    	Canvas canvas = (new ShapeFactory()).createShape(shape, spinner.getValue(), add_colour, very_random);
     	pattern.getChildren().add(canvas.group);
     	root.getChildren().add(pattern);
     	root.getChildren().add(vbox);
